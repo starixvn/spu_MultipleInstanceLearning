@@ -32,6 +32,9 @@
     <Compile Include="Algorithms\__init__.py" />
     <Compile Include="data\load_data.py" />
     <Compile Include="data\__init__.py" />
+    <Compile Include="Feature_Selection\Feature_Selection.py" />
+    <Compile Include="Feature_Selection\Session.py" />
+    <Compile Include="Feature_Selection\Transaction.py" />
     <Compile Include="functions\bagprob.py" />
     <Compile Include="functions\MIL2SIL.py" />
     <Compile Include="functions\__init__.py" />
@@ -49,6 +52,7 @@
     <Folder Include="functions\" />
     <Folder Include="Algorithms\" />
     <Folder Include="data\" />
+    <Folder Include="Feature_Selection\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

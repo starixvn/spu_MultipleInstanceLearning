@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn import svm
 
-class simpleMIL(object):
+class MIL(object):
         
     def __init__(self):
         self._model = None

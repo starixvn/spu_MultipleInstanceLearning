@@ -8,7 +8,7 @@ from sklearn.utils import shuffle
 import random as rand
 from data import load_data
 from sklearn.model_selection import train_test_split
-from Algorithms.simpleMIL import simpleMIL
+from Algorithms.MIL import MIL
 from Algorithms.BOW import BOW
 import pickle
 
@@ -41,7 +41,7 @@ metrics.auc(fpr, tpr)
 filename = 'D:/Model/model_BOW.sav'
 pickle.dump(bow_classifier, open(filename, 'wb'))
                             
-SMILa = simpleMIL() 
+SMILa = MIL() 
 SMILa.fit(train_bags, train_labels, type='average')
 predictions = SMILa.predict(test_bags)
 accuracie = np.average(test_labels.T == np.sign(predictions))
@@ -51,7 +51,7 @@ metrics.auc(fpr, tpr)
 filename = 'D:/Model/model_MIL_average.sav'
 pickle.dump(bow_classifier, open(filename, 'wb'))
                             
-SMILe = simpleMIL() 
+SMILe = MIL() 
 SMILe.fit(train_bags, train_labels, type='extreme')
 predictions = SMILe .predict(test_bags)
 accuracie = np.average(test_labels.T == np.sign(predictions))
@@ -61,7 +61,7 @@ metrics.auc(fpr, tpr)
 filename = 'D:/Model/model_MIL_extreme.sav'
 pickle.dump(bow_classifier, open(filename, 'wb'))
 
-SMILmx = simpleMIL() 
+SMILmx = MIL() 
 SMILmx.fit(train_bags, train_labels, type='max')
 predictions = SMILmx.predict(test_bags)
 accuracie = np.average(test_labels.T == np.sign(predictions))
@@ -71,7 +71,7 @@ metrics.auc(fpr, tpr)
 filename = 'D:/Model/model_MIL_max.sav'
 pickle.dump(bow_classifier, open(filename, 'wb'))
                            
-SMILmn = simpleMIL() 
+SMILmn = MIL() 
 SMILmn.fit(train_bags, train_labels, type='min')
 predictions = SMILmn.predict(test_bags)
 accuracie = np.average(test_labels.T == np.sign(predictions))
